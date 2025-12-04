@@ -18,11 +18,11 @@ def register():
 
 @app.route('/submit', methods=['POST'])
 def submit_form():
-    name = request.form['name']
-    country = request.form['country']
-    age = request.form['age']
-    number = request.form['number']
-    email = request.form['email']
+    name = request.form['Name']
+    country = request.form['Country']
+    age = request.form['Age']
+    number = request.form['Number']
+    email = request.form['Email']
 
 
     data.append({'name': name, 'country': country, 'age': age})
@@ -31,7 +31,7 @@ def submit_form():
     with open('registrations.json', 'w') as file:
         json.dump(data, file, indent=2)
 
-    # TODO: Save form data to a JSON file (worksheet Part 1)
+
 
     flash('Registration submitted successfully!')
     return redirect(url_for('index'))
@@ -39,7 +39,7 @@ def submit_form():
 
 @app.route('/view')
 def view_registrations():
-    # TODO: Read data from registrations.json and send to template (worksheet Part 2)
+
     @app.route('/view')
     def view_registrations():
         with open('registrations.json', 'r') as file:
