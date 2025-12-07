@@ -1,14 +1,8 @@
-{% extends 'base.html' %}
-{% block content %}
-<h2>Refugee Registration Form</h2>
 <form method="POST" action="{{ url_for('submit_form') }}">
-  <p><input type="text" name="name" placeholder="Full name" required></p>
-  <p><input type="text" name="country" placeholder="Country of origin" required></p>
-  <p><input type="number" name="age" placeholder="Birth Date" required></p>
-  <p><input type="number" name="number" placeholder="Contact Information" required></p>
-  <p><input type="text" name="email" placeholder="Email Address" required></p>
-  <p><input type="text" name="reason" placeholder="Reason for coming" required></p>
-  <p><input type="text" name="reason" placeholder="Reason for coming" required></p>
-    <p><button type="submit">Submit</button></p>
+  Name: <input type="text" name="Name"><br>
+  Country: <input type="text" name="Country"><br>
+  Age: <input type="number" name="Age"><br>
+  Phone Number: <input type="text" name="Number"><br>
+  Email: <input type="email" name="Email"><br>
+  <input type="submit" value="Register">
 </form>
-{% endblock %}
